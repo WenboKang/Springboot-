@@ -1,0 +1,11 @@
+2019-07-28 20:05:51.888  INFO 28100 --- [main] c.e.demo.DemoApplication                 : Starting DemoApplication on DESKTOP-3LMD1IK with PID 28100 (started by Y in F:\Program Files\WorkSpaceOfIDEA\SpringbootTestDemo)
+2019-07-28 20:05:51.896  INFO 28100 --- [main] c.e.demo.DemoApplication                 : No active profile set, falling back to default profiles: default
+2019-07-28 20:05:53.823  INFO 28100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-28 20:05:53.862  INFO 28100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-28 20:05:53.864  INFO 28100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-28 20:05:54.066  INFO 28100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2019-07-28 20:05:54.067  INFO 28100 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2068 ms
+2019-07-28 20:05:54.312  INFO 28100 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-28 20:05:54.424  WARN 28100 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-28 20:05:54.581  INFO 28100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2019-07-28 20:05:54.586  INFO 28100 --- [main] c.e.demo.DemoApplication                 : Started DemoApplication in 3.652 seconds (JVM running for 5.846)
