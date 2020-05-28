@@ -10,8 +10,9 @@ spring:
     servlet:
       content-type: text/html
 
+  # ===数据库相关配置=====
   datasource:
-        url: jdbc:mysql://localhost:3306/taiir_paramstest?useUnicode=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8&serverTimezone=UTC
+        url: jdbc:mysql://localhost:3306/wechatpay?useUnicode=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8&serverTimezone=UTC&useAffectedRows=true
         #    url: jdbc:mysql://localhost:3306/sputdemo?
         username: root
         password: root
@@ -32,18 +33,13 @@ spring:
           test-while-idle: true
           time-between-eviction-runs-millis: 5000
 
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #实体类与表格驼峰关系对应
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句
 
-#    #\u8868\u793A\u8BE5\u914D\u7F6E\u76F4\u63A5\u4E3ASpring\u5BB9\u5668\u8D1F\u8D23\u5904\u7406
-#\u3000\u3000datasource:
-#  \u3000\u3000type: com.alibaba.druid.pool.DruidDataSource   #\u914D\u7F6E\u5F53\u524D\u8981\u4F7F\u7528\u7684\u6570\u636E\u6E90\u7684\u64CD\u4F5C\u7C7B\u578B\u90A3\u4E2A
-#  \u3000\u3000driver-class-name:  com.mysql.jdbc.Driver  #\u914D\u7F6EMySQL\u7684\u9A71\u52A8\u7A0B\u5E8F\u7C7B
-#  \u3000\u3000url: jdbc:mysql://localhost:3306/taiir_paramstest?useUnicode=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8&serverTimezone=UTC
-#
-#  \u3000\u3000username: root
-#  \u3000\u3000password: root
-#  \u3000\u3000filters: stat,wall,log4j     #druid\u76D1\u63A7\u914D\u7F6E
-#  \u3000\u3000dbcp2:
-#    \u3000\u3000min-idle: 5         #\u6570\u636E\u5E93\u8FDE\u63A5\u6C60\u7684\u6700\u5C0F\u7EF4\u6301\u8FDE\u63A5\u6570
-#    \u3000\u3000initial-size: 5     #\u521D\u59CB\u5316\u63D0\u4F9B\u7684\u8FDE\u63A5\u6570
-#    \u3000\u3000max-total: 5          #\u6700\u5927\u7684\u8FDE\u63A5\u6570
-#    \u3000\u3000max-wait-millis: 200        #\u7B49\u5F85\u8FDE\u63A5\u83B7\u53D6\u7684\u6700\u5927\u8D85\u65F6\u65F6\u95F4
+
+#=======微信相关======
+wxpay:
+  appid: wx5beac15ca207cdd40c
+  appsecret: 554801238f17fdsdsdd6f96b382fe548215e9
