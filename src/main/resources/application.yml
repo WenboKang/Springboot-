@@ -10,7 +10,7 @@ spring:
     servlet:
       content-type: text/html
 
-  # ===数据库相关配置=====
+  # ===========数据库相关配置===============
   datasource:
         url: jdbc:mysql://localhost:3306/wechatpay?useUnicode=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8&serverTimezone=UTC&useAffectedRows=true
         #    url: jdbc:mysql://localhost:3306/sputdemo?
@@ -39,7 +39,13 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句
 
 
-#=======微信相关======
+#================================================微信相关====================================
+#公众号
 wxpay:
   appid: wx5beac15ca207cdd40c
   appsecret: 554801238f17fdsdsdd6f96b382fe548215e9
+#微信开放平台配置
+wxopen:
+  appid: wx025575eac69a2d5b
+  appsecret: deeae310a387fa9d3e8f3830ce64caa c
+  redirect_url: http://wesell.natapp1.cc/pub/api/v1/wechat/user/callback1 #重定向url

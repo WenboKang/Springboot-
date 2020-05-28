@@ -1,6 +1,7 @@
 package com.exampleofspringboot.demo.controller;
 
 import com.exampleofspringboot.demo.config.WechatConfig;
+import com.exampleofspringboot.demo.domain.JsonData;
 import com.exampleofspringboot.demo.domain.Video;
 import com.exampleofspringboot.demo.mapper.VideoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,10 @@ public class TestController {
     private WechatConfig wechatConfig;
     @RequestMapping("/testConfig")
     @ResponseBody
-    public String testConfig(){
+    public JsonData testConfig(){
 
-        return "id:  "+wechatConfig.getAppId()+"\t"+"秘钥：   "+wechatConfig.getAppSecret();
+        //return "id:  "+wechatConfig.getAppId()+"\t"+"秘钥：   "+wechatConfig.getAppSecret();
+        return JsonData.buildSuccess(wechatConfig.getAppId());
     }
 
 
