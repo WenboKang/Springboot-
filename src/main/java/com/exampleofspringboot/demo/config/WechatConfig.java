@@ -46,6 +46,22 @@ public class WechatConfig {
 
 
 
+    /*开放平台获取 access_token 地址
+    * */
+    public  final static String OPEN_ACCESS_TOKEN_URL = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code";
+
+    public static String getOpenUserInfoUrl() {
+        return OPEN_USER_INFO_URL;
+    }
+
+    /**
+     * 获取用户信息
+     */
+    public  final static String OPEN_USER_INFO_URL ="https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s&lang=zh_CN";
+
+
+
+
     public String getAppId() {
         return appId;
     }

@@ -36,7 +36,8 @@ public class JwtUtils {
                 .claim("img", user.getHeadImg())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE))
-                .signWith(SignatureAlgorithm.HS256, APPSECRET).compact();
+                .signWith(SignatureAlgorithm.HS256, APPSECRET)
+                .compact();
         return token;
     }
 

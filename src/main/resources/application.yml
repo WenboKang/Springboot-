@@ -47,5 +47,5 @@ wxpay:
 #微信开放平台配置
 wxopen:
   appid: wx025575eac69a2d5b
-  appsecret: deeae310a387fa9d3e8f3830ce64caa c
-  redirect_url: http://wesell.natapp1.cc/pub/api/v1/wechat/user/callback1 #重定向url
+  appsecret: deeae310a387fa9d3e8f3830ce64caac
+  redirect_url: 7yhb4d.natappfree.cc/api/v1/wechat/user/callback #重定向url
