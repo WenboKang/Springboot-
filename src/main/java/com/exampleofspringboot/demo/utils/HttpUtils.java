@@ -71,7 +71,7 @@ public class HttpUtils {
     /**
      * 封装post
      * @param url
-     * @param data
+     * @param data  参数
      * @return
      */
     public static String doPost(String url , String data , int timeout){
@@ -98,7 +98,6 @@ public class HttpUtils {
             HttpEntity httpEntity = httpResponse.getEntity();
             if (httpResponse.getStatusLine().getStatusCode() == 200){
                 //请求状态码为200
-
                 String jsonResult = EntityUtils.toString(httpEntity);   //返回的实体（String形式）
                 return jsonResult ;
             }

@@ -19,6 +19,11 @@ public interface VideoMapper {
     @Select("select * from video")
     List<Video>  findAll();
 
+    /**
+     * 根据 videoId查找
+     * @param id
+     * @return
+     */
     @Select("select * from video where id= #{id}")
     Video findById(int id);
 

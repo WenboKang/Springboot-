@@ -25,7 +25,7 @@ public class VideoProvider {
                 SET("summary=#{summary}");
             }
             if (video.getCoverImg()!=null){
-                SET("coverImg=#{coverImg}");
+                SET("cover_Img=#{coverImg}");
             }
             if (video.getViewNum()!=null){
                 SET("viewNum=#{viewNum}");
@@ -34,7 +34,7 @@ public class VideoProvider {
                 SET("price=#{price}");
             }
             if (video.getCreateTime()!=null){
-                SET("createTime=#{createTime}");
+                SET("create_time=#{createTime}");
             }
             if (video.getOnline()!=null){
                 SET("online=#{online}");

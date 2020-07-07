@@ -44,8 +44,18 @@ mybatis:
 wxpay:
   appid: wx5beac15ca207cdd40c
   appsecret: 554801238f17fdsdsdd6f96b382fe548215e9
+
+  #微信支付配置
+  mer_id: 1503809911  #商户号
+  key: xdclassdevsq2018xdclass2018x018d #秘钥
+  callback: 16web.tunnel.qydev.com/api/v1/wechat/order/callback #回调地址
+
+
 #微信开放平台配置
 wxopen:
   appid: wx025575eac69a2d5b
   appsecret: deeae310a387fa9d3e8f3830ce64caac
   redirect_url: 7yhb4d.natappfree.cc/api/v1/wechat/user/callback #重定向url
+
+
+

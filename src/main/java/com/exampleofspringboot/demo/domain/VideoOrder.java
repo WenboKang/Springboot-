@@ -16,6 +16,7 @@ public class VideoOrder implements Serializable {
   /*
   * 以分为单位*/
   private Integer totalFee;
+
   private String nickname;
   private String headImg;
   private Integer videoId;
@@ -159,5 +160,6 @@ public class VideoOrder implements Serializable {
   public void setDel(Integer del) {
     this.del = del;
   }
+
 
 }

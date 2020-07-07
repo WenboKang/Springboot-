@@ -42,12 +42,13 @@ public class VideoServiceTest {
 
     @Test
     public void update() {
-//        Video video = new Video();
-//        video.setTitle("新title");
-//        video.setCoverImg("新缩略图");
-//        video.setOnline(10);
-//        video.setPoint(10.0);
-//        videoService.update()
+        Video video = new Video();
+        video.setId(3);
+        video.setTitle("新title");
+        video.setCoverImg("新缩略图");
+        video.setOnline(666);
+        video.setPoint(10.0);
+        videoService.update(video);
     }
 
     @Test

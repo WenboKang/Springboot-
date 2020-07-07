@@ -60,6 +60,44 @@ public class WechatConfig {
     public  final static String OPEN_USER_INFO_URL ="https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s&lang=zh_CN";
 
 
+    /**
+     * 统一下单url
+     */
+    public  static final String  UNIFIED_ORDER_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
+
+    @Value("${wxpay.mer_id}")
+    private    String merId ;   //商户号
+    @Value("${wxpay.key}")
+    private  String key ;   //支付秘钥
+    @Value("${wxpay.callback}")
+    private  String payCallbackUrl ;   //支付秘钥
+
+
+    public String getMerId() {
+        return merId;
+    }
+
+    public void setMerId(String merId) {
+        this.merId = merId;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getPayCallbackUrl() {
+        return payCallbackUrl;
+    }
+
+    public void setPayCallbackUrl(String payCallbackUrl) {
+        this.payCallbackUrl = payCallbackUrl;
+    }
+
+
 
 
     public String getAppId() {

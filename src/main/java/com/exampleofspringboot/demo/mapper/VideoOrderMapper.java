@@ -16,10 +16,10 @@ public interface VideoOrderMapper {
      * @param videoOrder
      * @return
      */
-    @Insert("INSERT INTO `video_order` (`openid`,`out_trade_no`,`state`,`create_time`,`notify_time`,`total_free`," +
+    @Insert("INSERT INTO `video_order` (`open_id`,`out_trade_no`,`state`,`create_time`,`notify_time`,`total_fee`," +
             "`nickname`,`head_img`,`video_id`,`video_title`,`video_img`,`user_id`,`ip`,`del`)" +
             "VALUES " +
-            "(#{OPENID} , #{OutTradeNo} , #{state} , #{createTime} , #{notifyTime} , #{total_time} , #{total_free} " +
+            "(#{openId} , #{outTradeNo} , #{state} , #{createTime} , #{notifyTime}  , #{totalFee} " +
             ",#{nickname},#{headImg},#{videoId},#{videoTitle},#{videoImg},#{userId},#{ip},#{del});")
     @Options(useGeneratedKeys = true , keyProperty = "id" , keyColumn = "id")
     int insert(VideoOrder videoOrder);
@@ -30,7 +30,7 @@ public interface VideoOrderMapper {
      * @return
      */
     @Select("SELECT * FROM video_order WHERE id = #{order_id} AND  del=0")
-    VideoOrder fingdById(@Param("order_id") int id);
+    VideoOrder findById(@Param("order_id") int id);
 
     /**
      * 根据交易订单号获取订单对象
@@ -67,6 +67,6 @@ public interface VideoOrderMapper {
      */
     @Update("update video_order set state=#{state} , notify_time = #{notifyTime} , openid =#{openid}" +
             "where out_trade=#{outTradeNo} and state=0 and del =0")
-    int updateVideoOrderByoutTradeNo(VideoOrder videoOrder);
+    int updateVideoOrderByOutTradeNo(VideoOrder videoOrder);
 
 }
